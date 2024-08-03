@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuItem } from 'primeng/api';
 import { PrimeNgModule } from '../../../prime-ng/prime-ng.module';
+import { ProductsModule } from '../../../products/products.module';
 
 @Component({
   selector: 'shared-menu',
   standalone: true,
-  imports: [PrimeNgModule],
+  imports: [PrimeNgModule, ProductsModule],
   templateUrl: './menu.component.html',
   styles: ``
 })
@@ -22,14 +23,17 @@ export class MenuComponent implements OnInit {
               {
                 label: 'Textos y Fechas',
                 icon: 'pi pi-align-left',
+                routerLink:'/'
               },
               {
                 label: 'Números',
                 icon: 'pi pi-dollar',
+                routerLink: 'numbers'
               },
               {
                 label: 'No comunes',
                 icon: 'pi pi-globe',
+                routerLink: 'uncommon'
               },
             ]
           },
