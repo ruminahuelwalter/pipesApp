@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { PrimeNGConfig } from 'primeng/api';
 import { ButtonModule } from 'primeng/button';
+import { SharedModule } from './shared/shared.module';
 
 @Component({
   selector: 'app-root',
@@ -11,6 +12,8 @@ import { ButtonModule } from 'primeng/button';
     CommonModule,
     RouterOutlet,
     ButtonModule,
+    SharedModule,
+   
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
