@@ -1,16 +1,19 @@
 import { Component } from '@angular/core';
 import { FieldsetModule } from 'primeng/fieldset';
 import { PrimeNgModule } from '../../../prime-ng/prime-ng.module';
-import { I18nSelectPipe, I18nPluralPipe } from '@angular/common';
+import { I18nSelectPipe, I18nPluralPipe, SlicePipe, JsonPipe, CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-uncommon-page',
   standalone: true,
   imports: [
+    CommonModule,
     FieldsetModule,
-    PrimeNgModule,
+    I18nPluralPipe,
     I18nSelectPipe,
-    I18nPluralPipe
+    JsonPipe,
+    PrimeNgModule,
+    SlicePipe,
   ],
   templateUrl: './uncommon-page.component.html',
   styleUrl: './uncommon-page.component.css'
@@ -41,5 +44,12 @@ export class UncommonPageComponent {
 
   public deleteClient(): void{
     this.clients.shift();
+  }
+
+  // KeyValue Pipe
+  public person = {
+    name: 'Walter',
+    age: 31,
+    adress: 'Gualjaina, Chubut'
   }
 }
