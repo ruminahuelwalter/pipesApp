@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FieldsetModule } from 'primeng/fieldset';
 import { PrimeNgModule } from '../../../prime-ng/prime-ng.module';
 import { I18nSelectPipe, I18nPluralPipe, SlicePipe, JsonPipe, CommonModule } from '@angular/common';
+import { interval, Observable, tap } from 'rxjs';
 
 @Component({
   selector: 'app-uncommon-page',
@@ -52,4 +53,19 @@ export class UncommonPageComponent {
     age: 31,
     adress: 'Gualjaina, Chubut'
   }
+
+  //Async Pipe
+  public myObservableTimer: Observable<number> = interval(2000).pipe(
+    tap( value => console.log('tap: ', value))
+  );
+
+  public promiseValue: Promise<string> = new Promise( (resolve, reject) =>{
+    setTimeout(() => {
+      resolve( 'Tenemos data en la promesa.');
+      console.log( 'Tenemos data en la promesa.');
+    })
+  })
+
+
+
 }
