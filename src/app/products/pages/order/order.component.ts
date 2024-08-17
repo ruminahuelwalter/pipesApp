@@ -15,4 +15,10 @@ import { ProductsModule } from '../../products.module';
 })
 export class OrderComponent {
 
+  public isUpperCase: boolean = false;
+
+
+  toggleUpperCase():void {
+    this.isUpperCase = !this.isUpperCase
+  }
 }
