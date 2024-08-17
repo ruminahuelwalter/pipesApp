@@ -1,11 +1,14 @@
 import { Component } from '@angular/core';
 import { PrimeNgModule } from '../../../prime-ng/prime-ng.module';
+import { ProductsModule } from '../../products.module';
+
 
 @Component({
   selector: 'products-order',
   standalone: true,
   imports: [
-    PrimeNgModule
+    PrimeNgModule,
+    ProductsModule
   ],
   templateUrl: './order.component.html',
   styles: ``
