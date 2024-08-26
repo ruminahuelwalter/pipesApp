@@ -3,6 +3,7 @@ import { PrimeNgModule } from '../../../prime-ng/prime-ng.module';
 import { ProductsModule } from '../../products.module';
 import { Color, Hero } from '../../interfaces/hero.interface';
 import { CanFlyPipe } from "../../pipes/canFly.pipe";
+import { SortByPipe } from "../../pipes/sort-by.pipe";
 
 
 @Component({
@@ -11,7 +12,8 @@ import { CanFlyPipe } from "../../pipes/canFly.pipe";
   imports: [
     PrimeNgModule,
     ProductsModule,
-    CanFlyPipe
+    CanFlyPipe,
+    SortByPipe
 ],
   templateUrl: './order.component.html',
   styles: ``
