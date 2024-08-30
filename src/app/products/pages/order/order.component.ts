@@ -21,6 +21,9 @@ import { SortByPipe } from "../../pipes/sort-by.pipe";
 export class OrderComponent {
 
   public isUpperCase: boolean = false;
+  //public orderBy: keyof Hero | undefined | '' = '';
+  public orderBy?: keyof Hero;
+
   public heroes: Hero[] = [
     {
       name: 'Superman',
@@ -53,5 +56,8 @@ export class OrderComponent {
     this.isUpperCase = !this.isUpperCase
   }
 
-
+  changeOrder( value: keyof Hero) {
+    this.orderBy = value; 
+  }
+ 
 }
